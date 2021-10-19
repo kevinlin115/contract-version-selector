@@ -51,8 +51,6 @@ export class AppComponent {
       activityType: ActivityType
     } = this.contractFrom.value;
 
-    console.error(this.contractFrom.value)
-    console.error(value)
     this.result.contractVersion = (value.activityType === ActivityType.LH2 || value.activityType === ActivityType.TaipeiUE) ?
       ContractVersion.Special : ContractVersion.NotSpecial;
     this.result.addPatch = value.honor === HonorType.Honor ? AddPatch.Need : AddPatch.NoNeed;
